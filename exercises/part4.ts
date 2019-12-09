@@ -23,7 +23,7 @@ class Spacecraft {
         this.name = name;
         this.speedMph = speedMph;
     }
-    function getDaysToLocation(kilometersAway: number): number {
+    getDaysToLocation(kilometersAway: number): number {
         let milesAway = kilometersAway * this.milesPerKilometer;
         let hours = milesAway / this.speedMph;
         return hours / 24;

@@ -17,13 +17,13 @@ var Spacecraft = /** @class */ (function () {
         this.name = name;
         this.speedMph = speedMph;
     }
+    Spacecraft.prototype.getDaysToLocation = function (kilometersAway) {
+        var milesAway = kilometersAway * this.milesPerKilometer;
+        var hours = milesAway / this.speedMph;
+        return hours / 24;
+    };
     return Spacecraft;
 }());
-function getDaysToLocation(kilometersAway) {
-    var milesAway = kilometersAway * this.milesPerKilometer;
-    var hours = milesAway / this.speedMph;
-    return hours / 24;
-}
 // Create an instance of the class here:
 var spaceShuttle = new Spacecraft("Determination", 17500);
 // Print two outputs - one for the trip to Mars and one for the trip to the moon.
